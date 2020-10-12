@@ -1,0 +1,31 @@
+.collection
+  padding-top: 120px
+  &-wrapper
+    display: flex
+    justify-content: space-between
+  &__left
+    display: grid
+    grid-template-columns: repeat(2, 321px)
+    grid-template-rows: repeat(2, 230px)
+    grid-gap: 30px
+  &__image
+    border-radius: 8px
+    &--big
+      grid-row: span 2
+  &__right
+    display: flex
+    flex-direction: column
+    max-width: 408px
+  &__title
+    padding-top: 6px
+    margin-bottom: 29px
+  &__description
+    margin-bottom: 40px
+  &-link
+    &__text
+      display: inline-block
+      font-weight: bold
+      font-size: 17px
+      line-height: 25px
+      color: $light
+      margin-right: 18px
