@@ -13,6 +13,12 @@
       flex-direction: column
       align-items: center
 
+@media (max-width: 1140px) 
+  .trends
+    &-card
+      &__more
+        font-size: 21px
+
 @media (max-width: 1000px) 
   .header 
     padding-top: 26px
@@ -64,7 +70,7 @@
     &__title
       padding-top: 36px
       padding-left: 8px
-      font-size: 42px
+      font-size: 48px
       line-height: 60px
     &__description
       max-width: 688px
@@ -75,3 +81,33 @@
     &-link
       &__text
         padding-left: 8px
+  .trends
+    &-cards
+      justify-content: center
+      grid-template-columns: repeat(2, minmax(200px, 261px))
+      grid-template-rows: repeat(4, 441px)
+
+@media (max-width: 770px)
+  .trends
+    padding-top: 75px
+    &__top
+      flex-direction: column
+      align-items: center
+    &-cards
+      padding-top: 56px
+      grid-template-columns: repeat(2, minmax(200px, 274px))
+      gap: 48px 54px
+    &-card
+      &__image
+        margin-bottom: 17px
+      &__title
+        padding-left: 4px
+      &__more
+        font-size: 23px
+  .tabs
+    margin: 0
+    padding-top: 31px
+  .pricetag
+    max-width: 264px
+    &__price
+      padding-left: 3px

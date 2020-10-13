@@ -3,11 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css">
   <link rel="stylesheet" href="./css/style.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
   <link rel="icon" href="./favicon.ico" type="image/x-icon">
   <title>Магазин одежды ehya</title>
+  <script src="./js/jquery-3.5.1.min.js" defer></script>
+  <script src="./js/swiper-bundle.min.js" defer></script>
+  <script src="./js/index.js" defer></script>
 </head>
 <body>
   <header class="header">
@@ -168,12 +172,9 @@
             </div>
           </div>
           <div class="trends-card">
-            <span class="trends-card__more"></span>
-            <span class="trends-card__title"></span>
-            <div class="pricetag">
-              <span class="pricetag__price"></span>
-              <img src="./img/trends/shopping-cart.svg" alt="" class="pricetag__button">
-            </div>
+            <span class="trends-card__more">
+              <strong class="trends-card__more-text">Смотреть больше&nbsp;коллекций</strong>
+            </span>
           </div>
         </div>
       </div>
@@ -181,5 +182,144 @@
     </div>
     <!-- /.container -->
   </section>
+
+  <section class="testimonial">
+    <div class="container">
+      <div class="testimonial-wrapper">
+        <!-- Slider main container -->
+        <div class="testimonial-slider swiper-container">
+          <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <img class="testimonial__icon" src="./img/quote.svg" alt="Иконка: кавычки">
+                <p class="testimonial__text">
+                  Мне очень нравятся дизайн и стили, которые создает Ehya. 
+                  Они такие разные и новаторские. Я покупала несколько раз из коллекций,
+                  и что мне нравится, это то, что они действительно неподвластны времени, 
+                  а качество ткани просто превосходно. Я с нетерпением жду новых коллекций от сезона к сезону
+                </p>
+                <span class="testimonial__author">Алисия Пума - клиент Fashun</span>
+              </div>
+              <div class="swiper-slide">
+                <img class="testimonial__icon" src="./img/quote.svg" alt="Иконка: кавычки">
+                <p class="testimonial__text">
+                  Мне очень нравятся дизайн и стили, которые создает Ehya. 
+                  Они такие разные и новаторские. Я покупала несколько раз из коллекций,
+                  и что мне нравится, это то, что они действительно неподвластны времени, 
+                  а качество ткани просто превосходно. Я с нетерпением жду новых коллекций от сезона к сезону
+                </p>
+                <span class="testimonial__author">Алисия Пума - клиент Fashun</span>
+              </div>
+              <div class="swiper-slide">
+                <img class="testimonial__icon" src="./img/quote.svg" alt="Иконка: кавычки">
+                <p class="testimonial__text">
+                  Мне очень нравятся дизайн и стили, которые создает Ehya. 
+                  Они такие разные и новаторские. Я покупала несколько раз из коллекций,
+                  и что мне нравится, это то, что они действительно неподвластны времени, 
+                  а качество ткани просто превосходно. Я с нетерпением жду новых коллекций от сезона к сезону
+                </p>
+                <span class="testimonial__author">Алисия Пума - клиент Fashun</span>
+              </div>
+          </div>
+          <div class="testimonial-pagination swiper-pagination"></div>
+        </div>
+      </div>
+      <!-- /.testimonial-wrapper -->
+      <hr class="testimonial__line" />
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.testimonial -->
+
+  <section class="history">
+    <div class="container">
+      <div class="history-wrapper">
+        <div class="history__left">
+          <span class="badge history__badge">Истории</span>
+          <h2 class="section-title history__title">Это история Fashun</h2>
+          <p class="history__description">
+            Ознакомьтесь с нашим рассказом о&nbsp;моде. 
+            Написано нашим дизайнером и специалистом.
+          </p>
+          <div class="history-buttons">
+            <button class="history__button history__button--prev">
+              <img src="./img/arrow-button.svg" alt="Иконка: назад">
+            </button>
+            <button class="history__button history__button--next">
+              <img src="./img/arrow-button.svg" alt="Иконка: вперед">
+            </button>
+          </div>
+        </div>
+        <div class="history__right">
+          <div class="history-slider">
+            <div class="history-slide">
+              <div class="history__slide">
+                <img class="history__image" src="./img/history/slide-1.jpg" alt="Картинка: формальный стиль">
+                <div class="history-info">
+                  <p class="history__text">
+                    Mix & Match Style 01: повседневный и формальный стиль
+                  </p>
+                  <a href="#" class="history__more">Читать далее</a>
+                </div>
+              </div>
+              <div class="history__slide">
+                <img class="history__image" src="./img/history/slide-2.jpg" alt="Картинка: лайфхак">
+                <div class="history-info">
+                  <p class="history__text">
+                    Лайфхак: Купите одежду Thrifft на воскресном рынке
+                  </p>
+                  <a href="#" class="history__more">Читать далее</a>
+                </div>
+              </div>
+            </div>
+            <div class="history-slide">
+              <div class="history__slide">
+                <img class="history__image" src="./img/history/slide-1.jpg" alt="Картинка: формальный стиль">
+                <div class="history-info">
+                  <p class="history__text">
+                    Mix & Match Style 02: повседневный и формальный стиль
+                  </p>
+                  <a href="#" class="history__more">Читать далее</a>
+                </div>
+              </div>
+              <div class="history__slide">
+                <img class="history__image" src="./img/history/slide-2.jpg" alt="Картинка: лайфхак">
+                <div class="history-info">
+                  <p class="history__text">
+                    Лайфхак: Купите одежду Thrifft на воскресном рынке
+                  </p>
+                  <a href="#" class="history__more">Читать далее</a>
+                </div>
+              </div>
+            </div>
+            <div class="history-slide">
+              <div class="history__slide">
+                <img class="history__image" src="./img/history/slide-1.jpg" alt="Картинка: формальный стиль">
+                <div class="history-info">
+                  <p class="history__text">
+                    Mix & Match Style 06: повседневный и формальный стиль
+                  </p>
+                  <a href="#" class="history__more">Читать далее</a>
+                </div>
+              </div>
+              <div class="history__slide">
+                <img class="history__image" src="./img/history/slide-2.jpg" alt="Картинка: лайфхак">
+                <div class="history-info">
+                  <p class="history__text">
+                    Лайфхак: Купите одежду Thrifft на воскресном рынке
+                  </p>
+                  <a href="#" class="history__more">Читать далее</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      <!-- /.history-wrapper -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.history -->
 </body>
 </html>

@@ -1,0 +1,70 @@
+.history
+  &__slide
+    position: relative
+  &-wrapper
+    display: flex
+    justify-content: space-between
+  &-info
+    width: 100%
+    max-width: 312px
+    position: absolute
+    bottom: -155px
+    left: 10px
+    padding-top: 20px
+    padding-left: 20px
+    min-height: 178px
+    background-color: $light-bg
+  &__right
+    padding-top: 10px
+  &__badge
+    padding: 6px 12px
+    margin-bottom: 24px
+  &__title
+    text-transform: capitalize
+    max-width: 337px
+    margin-bottom: 29px
+  &__description
+    max-width: 383px
+    margin-bottom: 48px
+    font-size: 20px
+    line-height: 36px
+    color: $light-text
+  &__more
+    font-weight: 600
+    font-size: 16px
+    line-height: 22px
+  &__button
+    width: 54px
+    height: 56px
+    border-radius: 50%
+    border: 2px solid $secondary
+    background-color: $primary
+    &:not(:last-child)
+      margin-right: 15px
+    &--prev
+      transform: rotate(180deg)
+  &__image
+    border-radius: 8px 8px 0px 0px
+  &__text
+    max-width: 260px
+    margin-bottom: 23px
+    font-family: "HK Grotesk", serif
+    font-weight: 500
+    font-size: 22px
+    line-height: 30px
+    letter-spacing: 0.2px
+  &-slider
+    width: 652px
+  &-slide
+    display: none
+    justify-content: space-between
+    animation: fade 1.5s
+    &--active
+      display: flex
+
+
+@keyframes fade 
+	from
+		opacity: 0
+	to
+		opacity: 1
