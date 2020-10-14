@@ -18,6 +18,37 @@
     &-card
       &__more
         font-size: 21px
+  .history
+    &-wrapper
+      flex-direction: column
+      align-items: center
+    &__title
+      max-width: unset
+    &__description
+      max-width: 556px
+    &__left
+      text-align: center
+    &__right
+      padding-top: 25px
+  .newsletter
+    min-height: 402px
+    padding-top: 67px
+    &-wrapper
+      flex-direction: column
+      align-items: center
+    &__description
+      margin-bottom: 56px
+    &__left
+      text-align: center
+    &__right
+      margin-right: 0
+      margin-left: 0
+  .footer
+    &-wrapper
+      justify-content: center
+      grid-template-columns: 265px repeat(2, 165px)
+  .company
+    grid-column: 2
 
 @media (max-width: 1000px) 
   .header 
@@ -85,7 +116,8 @@
     &-cards
       justify-content: center
       grid-template-columns: repeat(2, minmax(200px, 261px))
-      grid-template-rows: repeat(4, 441px)
+      grid-template-rows: repeat(4, 441px) 
+
 
 @media (max-width: 770px)
   .trends
@@ -111,3 +143,296 @@
     max-width: 264px
     &__price
       padding-left: 3px
+  .testimonial
+    padding-top: 91px
+    padding-bottom: 71px
+    &-slider
+      height: 417px
+    &__text
+      padding-left: 39px
+      padding-right: 28px
+      font-size: 19px
+      line-height: 42px
+    &__icon
+      padding-left: 0
+      margin-bottom: 34px
+  .history
+    padding-bottom: 236px
+    &__badge
+      margin-bottom: 21px
+    &__title
+      margin-bottom: 20px
+    &__description
+      margin-bottom: 35px
+    &__right
+      padding-top: 36px
+    &-slider
+      width: 682px
+  .footer
+    padding-top: 64px
+    &-wrapper
+      grid-template-columns: 265px repeat(2, 175px)
+      gap: 32px 18px
+
+@media (max-width: 710px)
+  .history
+    &__description
+      max-width: 480px
+      margin: auto
+    &-slider
+      width: unset
+    &-slide
+      flex-direction: column
+      align-items: center
+      justify-content: space-between
+      height: 839px
+  .collection
+    &__left
+      grid-template-columns: repeat(2, 265px)
+      grid-template-rows: repeat(3, minmax(230px, min-content))
+    &__image
+      &--big
+        grid-area: span 2 / span 2
+        width: 100%
+        height: 100%
+      &--small
+        width: 100%
+        height: 100%
+  .footer
+    &-wrapper
+      grid-template-columns: 180px repeat(2, 175px)
+
+@media (max-width: 590px)
+  .section
+    &-title
+      text-align: center
+    &-description
+      text-align: center
+  .hero
+    min-height: 900px
+    background-repeat: no-repeat
+    background-size: cover
+    padding-top: 350px
+    text-align: center
+    &__title
+      margin: auto
+      font-size: 32px
+      line-height: 40px
+    &__description
+      margin: auto
+      margin-top: 20px
+      font-size: 16px
+      line-height: 28px
+    &__button
+      margin-top: 24px
+      margin-bottom: 22px
+      font-size: 16px
+      line-height: 22px
+    &-benefits
+      margin: auto
+      flex-wrap: wrap
+      max-width: 350px
+      justify-content: space-evenly
+      height: 100px
+  .collection
+    &__left
+        grid-template-columns: repeat(2, minmax(130px, 200px))
+    &-link
+      display: none
+    &__image
+      object-fit: cover
+  .testimonial
+    &-slider
+      height: 555px
+  .footer
+    &-wrapper
+      grid-template-columns: repeat(2, 223px)
+      justify-content: start
+  .social
+    text-align: center
+    grid-row: 5
+    justify-self: center
+    &-icons
+      margin: auto
+  .navigation, .company, .services, .contacts, .social
+    grid-column: span 2
+  
+@media (max-width: 540px)
+  .header
+    padding-top: 18px
+    padding-bottom: 42px
+  .hero
+    padding-left: 0
+    width: 100%
+    padding-top: 377px
+    background-image: url('../../img/mobile-header.jpg')
+    background-position: unset
+    &__badge
+      margin-bottom: 13px
+    &__description
+      max-width: 280px
+      margin-top: 23px
+    &__button
+      padding: 11.5px 47px
+      margin-top: 23px
+      margin-bottom: 13px
+    &-benefits
+      justify-content: space-around
+      height: 84px
+  .collection
+    padding-top: 63px
+    &__left
+      grid-template-rows: repeat(2, minmax(0px, min-content))
+      gap: 14px
+    &__title
+      padding-top: 33px
+      padding-left: 0
+      margin-bottom: 23px
+      font-size: 28px
+      line-height: 36px
+    &__description
+      font-size: 16px
+      line-height: 28px
+      max-width: 280px
+      padding-left: 7px
+    &__image
+      &--big
+        height: 300px
+        grid-area: span 1 / span 2
+      &--small
+        width: 138px
+        height: 97px
+  .trends
+    padding-top: 85px
+    padding-left: 0
+    &-cards
+      padding-top: 35px
+      grid-template-columns: repeat(2, minmax(0px, 274px))
+      grid-template-rows: repeat(4, 234px)
+      gap: 20px 10px
+    &-card
+      &__image
+        width: 140px
+        height: 170px
+        margin-bottom: 13px
+      &__title
+        font-size: 16px
+        line-height: 20px
+        padding-left: 0
+      &__more
+        width: 140px
+        height: 170px
+        &::before
+          top: 35px
+        &-text
+          padding-top: 60px
+          font-size: 17px
+          line-height: 20px
+    &__title
+      font-size: 28px
+      line-height: 36px
+  .tabs
+    padding-top: 24px
+    min-width: 224px
+  .pricetag
+    max-width: 58px
+    &__price
+      padding-left: 0
+      font-size: 14px
+      line-height: 24px
+    &__button
+      width: 14px
+      height: 14px
+  .testimonial 
+    padding-top: 48px
+    padding-bottom: 35px
+    &--hidden
+      display: none
+    &-slider
+      height: 552px
+    &__text
+      font-size: 18px
+      line-height: 36px
+      padding-left: 0
+      padding-right: 0
+      margin-bottom: 25px
+    &__icon
+      width: 70px
+      height: 81px
+      margin-bottom: 8px
+    &__author
+      display: inline-block
+      max-width: 168px
+  .history
+    padding-bottom: 182px
+    &-slide
+      height: 711px
+    &-info
+      padding-top: 9px
+      padding-left: 15px
+    &__badge
+      margin-bottom: 18px
+    &__title
+      font-size: 28px
+      line-height: 36px
+      &--hidden
+        display: none
+    &__description
+      font-size: 16px
+      line-height: 28px
+      margin-bottom: 35px
+    &__button
+      width: 47px
+      height: 47px
+    &__image
+      width: 270px
+      height: 277px
+    &__text
+      font-size: 20px
+      line-height: 24px
+      margin-bottom: 17px
+  .newsletter
+    padding-top: 61px
+    min-height: 414px
+    &__title
+      font-size: 28px
+      line-height: 36px
+      margin-bottom: 25px
+    &__description
+      font-size: 16px
+      line-height: 28px
+      margin-bottom: 38px
+    &__form
+      width: 280px
+    &__input
+      min-height: 48px
+    &__button
+      top: 171%
+      width: 100%
+  .footer
+    padding-top: 48px
+    &-wrapper
+      gap: 14px 18px
+    &__title
+      font-size: 16px
+      line-height: 22px
+      margin-bottom: 21px
+    &-nav
+      &__item:not(:last-child) 
+        margin-bottom: 15px;
+      &__link
+        font-size: 14px
+        line-height: 20px
+  .navigation, .company, .services, .contacts
+    padding-left: 18px
+  .social
+    padding-top: 30px
+    padding-left: 17px
+    justify-self: flex-start
+    grid-column: span 2
+    &__text
+      max-width: 262px
+      margin-top: 12px
+      font-size: 14px
+      line-height: 24px
+      margin-bottom: 22px

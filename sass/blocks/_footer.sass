@@ -1,0 +1,35 @@
+.footer
+  padding-top: 128px
+  &-wrapper
+    display: grid
+    grid-template-columns: 265px repeat(4, 165px)
+    gap: 29px
+  &__title
+    margin-bottom: 31px
+    font-weight: bold
+    font-size: 18px
+    line-height: 25px
+    color: $secondary
+  &-nav
+    &__item
+      &:not(:last-child)
+        margin-bottom: 24px
+    &__link
+      font-size: 16px
+      line-height: 22px
+      text-decoration: none
+      color: $secondary
+
+.social
+  &__text
+    max-width: 263px
+    margin-top: 25px
+    margin-bottom: 30px
+    font-size: 16px
+    line-height: 28px
+    color: $light-text
+  &-icons
+    width: 100%
+    max-width: 185px
+    display: flex
+    justify-content: space-between
