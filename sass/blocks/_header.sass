@@ -28,5 +28,29 @@
     color: $light
 .menu
   &-mobile
+    &-list
+      &__item
+        &:not(:last-child)
+        margin-bottom: 20px
+    &__link
+      font-weight: 600
+      font-size: 16px
+      line-height: 22px
+      color: $secondary
     &__button
-      display: none  
+      display: none
+    &__login
+      font-weight: bold
+      font-size: 16px
+      line-height: 22px
+      padding: 9px 101px
+      border-color: $light
+      background-color: $primary
+      color: $light
+    &__close
+      position: absolute
+      top: 16px
+      right: 23px
+
+.mobile
+  display: none

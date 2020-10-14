@@ -1,9 +1,123 @@
+@media (min-width: 992px)
+  .header
+    &__link
+      position: relative
+      &::after
+        content: ''
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 0%
+        height: 2px
+        background-color: $secondary
+        transition: linear 0.3s
+      &:hover::after
+        width: 100%
+    &__button
+      position: relative
+      transition: 0.2s
+      overflow: hidden
+      &:hover
+        background-color: $light
+        border-color: $primary
+        color: $primary
+      &::before
+        content: ''
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: -100%
+        background: linear-gradient(90deg, transparent, #fff, transparent)
+        transition: 0.5s
+      &:hover::before
+        left: 100%
+  .hero
+    &__button
+      position: relative
+      transition: 0.2s
+      overflow: hidden
+      &:hover
+        background-color: lighten($secondary, 10)
+      &::before
+        content: ''
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: -100%
+        background: linear-gradient(90deg, transparent, #fff, transparent)
+        transition: 0.5s
+      &:hover::before
+        left: 100%
+  .collection
+    &-link
+      &__text
+        position: relative
+        &::after
+          content: ''
+          position: absolute
+          bottom: 0
+          left: 0
+          width: 0%
+          height: 2px
+          background-color: $light
+          transition: linear 0.3s
+        &:hover::after
+          width: 100%
+  .pricetag
+    &__button
+      cursor: pointer
+  .history
+    &__button
+      cursor: pointer
+      &:hover
+        background-color: darken($primary, 5)
+  .newsletter
+    &__button
+      transition: 0.2s
+      overflow: hidden
+      &:hover
+        background-color: lighten($secondary, 10)
+      &::before
+        content: ''
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: -100%
+        background: linear-gradient(90deg, transparent, #fff, transparent)
+        transition: 0.5s
+      &:hover::before
+        left: 100%
+  .social
+    &__link
+      img
+        transition: linear 0.2s
+        &:hover
+          border-radius: 50%
+          box-shadow: 0px 0px 30px darken($primary, 70)
+  .footer
+    &-nav
+      &__link
+        position: relative
+        &::before
+          content: ''
+          position: absolute
+          bottom: 0
+          width: 100%
+          height: 2px
+          background-color: $secondary
+          transition: ease 0.3s
+          transform: scale(0)
+        &:hover::before
+          transform: scale(1)
+
 @media (max-width: 1330px)
   .container 
     width: 90%
   .hero
     width: 90%
-
 
 @media (max-width: 1250px)
   .collection
@@ -59,6 +173,19 @@
       margin: 0 auto
     &-menu, &__button
       display: none
+  .mobile
+    &--active
+      display: flex
+      justify-content: center
+      flex-direction: column
+      position: fixed
+      top: 10px
+      min-width: 304px
+      left: 8px
+      right: 8px
+      background-color: $primary
+      z-index: 2
+      padding: 26px 24px
   .menu
     &-mobile
       &__button
@@ -70,6 +197,7 @@
         height: 20px
         border: none
         background-color: $primary
+        outline: none
         &-line
           width: 22px
           height: 2px
@@ -364,7 +492,7 @@
       display: inline-block
       max-width: 168px
   .history
-    padding-bottom: 182px
+    padding-bottom: 179px
     &-slide
       height: 711px
     &-info
@@ -412,6 +540,7 @@
   .footer
     padding-top: 48px
     &-wrapper
+      grid-template-columns: repeat(1, 223px)
       gap: 14px 18px
     &__title
       font-size: 16px
