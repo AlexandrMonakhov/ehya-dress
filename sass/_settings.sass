@@ -1,9 +1,34 @@
 *, *:before, *:after
   box-sizing: border-box
+  scroll-behavior: smooth
 
 body 
   font-family: 'Open Sans', sans-serif
   background-color: $primary
+
+.thanks
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  height: 100vh
+  &-box
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+    height: 200px
+  &__title
+    font-family: "HK Grotesk", serif;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: 0.2px;
+    color: #183B56;
+  &__button
+    background-color: $secondary
+    color: $primary
+    margin-top: 20px
+    padding: 6px 26px
 
 .container
   max-width: 1136px
@@ -15,6 +40,9 @@ ul, li
 
 h1, h2, h3, p 
   margin: 0
+
+a, input, button
+  outline: none
 
 a
   text-decoration: none
@@ -58,3 +86,9 @@ a
   &-button
     &-disabled
       opacity: 0.6
+
+.invalid
+  color: red
+  text-decoration: underline
+  margin-top: 18px
+  width: 100%

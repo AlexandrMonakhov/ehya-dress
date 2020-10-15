@@ -32,6 +32,21 @@ const testimonial = new Swiper('.testimonial-slider', {
   },
 });
 
+$(".form").validate({
+  errorClass: "invalid",
+  rules: {
+    email: {
+      required: true,
+    },
+  },
+  messages: {
+    email: {
+      required: "Введите ваш Email",
+      email: "Формат адреса name@domain.com"
+    },
+  }
+});
+
 const showSlide = (n) => {
   slideIndex = n > slides.length ? 1 : n < 1 ? slides.length : slideIndex
 

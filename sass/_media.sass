@@ -65,6 +65,31 @@
           transition: linear 0.3s
         &:hover::after
           width: 100%
+  .tabs
+    &__item
+      position: relative
+      &::after
+        content: ''
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 0%
+        height: 2px
+        background-color: $secondary
+        transition: ease 0.2s
+      &:hover::after
+        width: 100%
+  .trends
+    &-card
+      transition: ease 0.3s
+      &:hover
+        box-shadow: 0 0 50px $secondary
+        border-radius: 8px
+      &__more
+        transition: ease 0.3s
+        &:hover
+          box-shadow: 0 0 50px $secondary
+          border-radius: 8px
   .pricetag
     &__button
       cursor: pointer
@@ -73,6 +98,20 @@
       cursor: pointer
       &:hover
         background-color: darken($primary, 5)
+    &__more
+      position: relative
+      &::after
+        content: ''
+        position: absolute
+        bottom: 0
+        left: 0
+        height: 2px
+        background-color: $light
+        width: 100%
+        transition: ease-in-out 0.3s
+        transform: scale(0)
+      &:hover::after
+        transform: scale(1)
   .newsletter
     &__button
       transition: 0.2s
@@ -179,7 +218,7 @@
       justify-content: center
       flex-direction: column
       position: fixed
-      top: 10px
+      top: 0
       min-width: 304px
       left: 8px
       right: 8px
@@ -263,7 +302,13 @@
       &__title
         padding-left: 4px
       &__more
+        max-width: unset
         font-size: 23px
+        &::before
+          top: 116px
+          left: 49%
+  .wrap
+    white-space: nowrap
   .tabs
     margin: 0
     padding-top: 31px
@@ -296,6 +341,9 @@
       padding-top: 36px
     &-slider
       width: 682px
+    &-info
+      &__right
+        padding-left: 0
   .footer
     padding-top: 64px
     &-wrapper
@@ -392,8 +440,8 @@
   .hero
     padding-left: 0
     width: 100%
-    padding-top: 377px
-    background-image: url('../../img/mobile-header.jpg')
+    padding-top: 374px
+    background-image: url('./../img/mobile-header.jpg')
     background-position: unset
     &__badge
       margin-bottom: 13px
@@ -431,18 +479,19 @@
         width: 138px
         height: 97px
   .trends
-    padding-top: 85px
+    padding-top: 83px
     padding-left: 0
     &-cards
-      padding-top: 35px
+      padding-top: 34px
       grid-template-columns: repeat(2, minmax(0px, 274px))
       grid-template-rows: repeat(4, 234px)
       gap: 20px 10px
+      justify-items: center
     &-card
       &__image
         width: 140px
         height: 170px
-        margin-bottom: 13px
+        margin-bottom: 12px
       &__title
         font-size: 16px
         line-height: 20px
@@ -462,6 +511,8 @@
   .tabs
     padding-top: 24px
     min-width: 224px
+  .wrap
+    white-space: normal
   .pricetag
     max-width: 58px
     &__price
@@ -484,6 +535,7 @@
       padding-left: 0
       padding-right: 0
       margin-bottom: 25px
+      letter-spacing: 0.12px
     &__icon
       width: 70px
       height: 81px
@@ -491,8 +543,11 @@
     &__author
       display: inline-block
       max-width: 168px
+      padding-left: 0
+    &__wrap
+      white-space: break-spaces
   .history
-    padding-bottom: 179px
+    padding-bottom: 182px
     &-slide
       height: 711px
     &-info
@@ -537,6 +592,7 @@
     &__button
       top: 171%
       width: 100%
+      right: 0
   .footer
     padding-top: 48px
     &-wrapper
