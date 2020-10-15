@@ -287,6 +287,9 @@
 
 
 @media (max-width: 770px)
+  .hero
+    &__benefits
+      margin-top: 35px
   .trends
     padding-top: 75px
     &__top
@@ -294,8 +297,8 @@
       align-items: center
     &-cards
       padding-top: 56px
-      grid-template-columns: repeat(2, minmax(200px, 274px))
-      gap: 48px 54px
+      grid-template-columns: repeat(2, minmax(200px, 280px))
+      gap: 48px 42px
     &-card
       &__image
         margin-bottom: 17px
@@ -307,8 +310,6 @@
         &::before
           top: 116px
           left: 49%
-  .wrap
-    white-space: nowrap
   .tabs
     margin: 0
     padding-top: 31px
@@ -322,15 +323,21 @@
     &-slider
       height: 417px
     &__text
-      padding-left: 39px
+      padding-left: 32px
       padding-right: 28px
       font-size: 19px
       line-height: 42px
+      margin-bottom: 26px
     &__icon
       padding-left: 0
       margin-bottom: 34px
+    &__author
+      padding-left: 0
+    &--hidden
+      &-tablet
+        display: none
   .history
-    padding-bottom: 236px
+    padding-bottom: 233px
     &__badge
       margin-bottom: 21px
     &__title
@@ -339,11 +346,13 @@
       margin-bottom: 35px
     &__right
       padding-top: 36px
+    &-slide
+      justify-content: space-evenly
     &-slider
-      width: 682px
+      width: 728px
     &-info
-      &__right
-        padding-left: 0
+      padding-top: 18px
+      padding-left: 13px
   .footer
     padding-top: 64px
     &-wrapper
@@ -545,7 +554,7 @@
       max-width: 168px
       padding-left: 0
     &__wrap
-      white-space: break-spaces
+      display: block
   .history
     padding-bottom: 182px
     &-slide
