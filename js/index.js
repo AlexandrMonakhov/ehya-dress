@@ -2,7 +2,7 @@ const slides = document.querySelectorAll(".history-slide"),
   prev = document.querySelector(".history__button--prev"),
   next = document.querySelector(".history__button--next"),
   mobileMenuButton = document.querySelector('.menu-mobile__button'),
-  mobileMenuClose = document.querySelector('.menu-mobile__close'),
+  mobileMenuClose = document.querySelector('.mobile__close'),
   mobileMenu = document.querySelector('.mobile'),
   modalButton = document.querySelectorAll('[data-toggle=modal]'),
   modalOverlay = document.querySelector('.modal-overlay'),
@@ -128,7 +128,7 @@ mobileMenuButton.addEventListener('click', openMenu);
 
 mobileMenu.addEventListener('click', event => {
   const target = event.target;
-  if (target.closest('.menu-mobile__close') || target.closest('.menu-mobile__link')) {
+  if (target.closest('.mobile__close') || target.closest('.menu-mobile__link')) {
     closeMenu();
   }
 });
@@ -141,7 +141,7 @@ next.addEventListener("click", () => setSlide(1));
 
 modalButton.forEach(item => {
   item.addEventListener('click', () => {
-    showModal(item.id === 'authBtn');
+    showModal(item.dataset.id === 'authBtn');
     document.addEventListener('keydown', closeEsc)
   });
 });
