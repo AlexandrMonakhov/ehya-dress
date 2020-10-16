@@ -3,7 +3,11 @@ const slides = document.querySelectorAll(".history-slide"),
   next = document.querySelector(".history__button--next"),
   mobileMenuButton = document.querySelector('.menu-mobile__button'),
   mobileMenuClose = document.querySelector('.menu-mobile__close'),
-  mobileMenu = document.querySelector('.mobile');
+  mobileMenu = document.querySelector('.mobile'),
+  modalButton = document.querySelectorAll('[data-toggle=modal]'),
+  modalOverlay = document.querySelector('.modal-overlay'),
+  modalDialog = document.querySelector('.modal-dialog'),
+  closeModalButton = document.querySelector('.modal__close');
 let slideIndex = 1;
 
 const tabsItem = $(".tabs__item");
@@ -32,19 +36,37 @@ const testimonial = new Swiper('.testimonial-slider', {
   },
 });
 
-$(".form").validate({
-  errorClass: "invalid",
-  rules: {
-    email: {
-      required: true,
+$(".form").each(function () {
+  $(this).validate({
+    errorClass: "invalid",
+    rules: {
+      name: {
+        required: true,
+        minlength: 2,
+      },
+      email: {
+        required: true,
+      },
+      password: {
+        required: true,
+        minlength: 8,
+      }
     },
-  },
-  messages: {
-    email: {
-      required: "Введите ваш Email",
-      email: "Формат адреса name@domain.com"
-    },
-  }
+    messages: {
+      name: {
+        required: "Введите ваше имя",
+        minlength: "Имя должно быть не меньше 2 символов"
+      },
+      password: {
+        required: "Введите ваш пароль",
+        minlength: "Длинна пароля не менее 8 символов"
+      },
+      email: {
+        required: "Введите ваш Email",
+        email: "Формат адреса name@domain.com"
+      },
+    }
+  });
 });
 
 const showSlide = (n) => {
@@ -61,6 +83,37 @@ const setSlide = (n) => {
 };
 showSlide(slideIndex);
 
+const openModal = () => {
+  modalOverlay.classList.add('modal-overlay_visible');
+  modalDialog.classList.add('modal-dialog_visible');
+};
+
+const showModal = type => {
+  const wearForm = document.querySelector("#clothes");
+  const authForm = document.querySelector("#auth");
+  console.log(type);
+
+  if (type) {
+    authForm.classList.remove("hide");
+    wearForm.classList.add("hide");
+  } else {
+    wearForm.classList.remove("hide");
+    authForm.classList.add("hide");
+  }
+  openModal()
+};
+
+const closeModal = () => {
+  modalOverlay.classList.remove('modal-overlay_visible');
+  modalDialog.classList.remove('modal-dialog_visible');
+}
+
+const closeEsc = ({ code }) => {
+  if (code === 'Escape') {
+    closeModal();
+    document.removeEventListener('keydown', closeEsc);
+  }
+};
 
 mobileMenuButton.addEventListener('click', () => mobileMenu.classList.add('mobile--active'));
 
@@ -68,3 +121,16 @@ mobileMenuClose.addEventListener('click', () => mobileMenu.classList.remove('mob
 
 prev.addEventListener("click", () => setSlide(-1));
 next.addEventListener("click", () => setSlide(1));
+
+
+modalButton.forEach(item => {
+  item.addEventListener('click', () => {
+    showModal(item.id === 'authBtn');
+    document.addEventListener('keydown', closeEsc)
+  });
+});
+
+closeModalButton.addEventListener('click', () => {
+  closeModal();
+  document.removeEventListener('keydown', closeEsc);
+});
