@@ -115,9 +115,25 @@ const closeEsc = ({ code }) => {
   }
 };
 
-mobileMenuButton.addEventListener('click', () => mobileMenu.classList.add('mobile--active'));
+const openMenu = () => {
+  mobileMenu.classList.add('mobile--active');
+}
 
-mobileMenuClose.addEventListener('click', () => mobileMenu.classList.remove('mobile--active'));
+const closeMenu = () => {
+  mobileMenu.classList.remove('mobile--active');
+};
+
+
+mobileMenuButton.addEventListener('click', openMenu);
+
+mobileMenu.addEventListener('click', event => {
+  const target = event.target;
+  if (target.closest('.menu-mobile__close') || target.closest('.menu-mobile__link')) {
+    closeMenu();
+  }
+});
+
+mobileMenuClose.addEventListener('click', () => closeMenu);
 
 prev.addEventListener("click", () => setSlide(-1));
 next.addEventListener("click", () => setSlide(1));
