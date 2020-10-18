@@ -236,7 +236,7 @@
       justify-content: center
       flex-direction: column
       position: fixed
-      top: 0
+      top: 10px
       min-width: 304px
       left: 8px
       right: 8px
@@ -245,20 +245,21 @@
       padding: 26px 24px
   .menu
     &-mobile
-      &__button
-        display: flex
-        align-items: center
-        flex-direction: column
-        justify-content: space-between
-        width: 24px
-        height: 20px
-        border: none
-        background-color: $primary
-        outline: none
-        &-line
-          width: 22px
-          height: 2px
-          background-color: $dark
+  .mobile
+    &__button
+      display: flex
+      align-items: center
+      flex-direction: column
+      justify-content: space-between
+      width: 24px
+      height: 20px
+      border: none
+      background-color: $primary
+      outline: none
+      &-line
+        width: 22px
+        height: 2px
+        background-color: $dark
   .hero
     width: 95%
     padding-top: 36px
@@ -408,6 +409,11 @@
     &-wrapper
       grid-template-columns: 180px repeat(2, 175px)
 
+@media (max-width: 670px)
+  .testimonial-slider 
+    height: 451px
+
+
 @media (max-width: 590px)
   .section
     &-title
@@ -470,7 +476,7 @@
   .navigation, .company, .services, .contacts, .social
     grid-column: span 2
   
-@media (max-width: 540px)
+@media (max-width: 440px)
   .header
     padding-top: 18px
     padding-bottom: 42px
@@ -564,11 +570,11 @@
       height: 14px
   .testimonial 
     padding-top: 48px
-    padding-bottom: 35px
+    padding-bottom: 29px
     &--hidden
       display: none
     &-slider
-      height: 552px
+      height: 558px
     &__text
       font-size: 18px
       line-height: 36px
@@ -635,6 +641,7 @@
       right: 0
   .footer
     padding-top: 48px
+    padding-bottom: 69px
     &-wrapper
       grid-template-columns: repeat(1, 223px)
       gap: 14px 18px

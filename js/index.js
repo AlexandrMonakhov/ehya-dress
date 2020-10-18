@@ -1,7 +1,7 @@
 const slides = document.querySelectorAll(".history-slide"),
   prev = document.querySelector(".history__button--prev"),
   next = document.querySelector(".history__button--next"),
-  mobileMenuButton = document.querySelector('.menu-mobile__button'),
+  mobileMenuButton = document.querySelector('.mobile__button'),
   mobileMenuClose = document.querySelector('.mobile__close'),
   mobileMenu = document.querySelector('.mobile'),
   modalButton = document.querySelectorAll('[data-toggle=modal]'),
@@ -27,12 +27,23 @@ const testimonial = new Swiper('.testimonial-slider', {
   spaceBetween: 30,
   centeredSlides: true,
   autoplay: {
-    delay: 7000,
+    delay: 2000,
     disableOnInteraction: false,
   },
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
+  },
+  on: {
+    init() {
+      this.el.addEventListener('mouseenter', () => {
+        this.autoplay.stop();
+      });
+
+      this.el.addEventListener('mouseleave', () => {
+        this.autoplay.start();
+      });
+    }
   },
 });
 
